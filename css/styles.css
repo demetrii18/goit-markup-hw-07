@@ -24,8 +24,9 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* ========== Сброс всех точек возле элементов списка ========== */
+/* ========== Сброс стилей возле элементов списка ========== */
 ul {
+  padding: 0;
   list-style: none;
 }
 
@@ -42,13 +43,43 @@ ul {
   margin-bottom: 0;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button {
+  text-align: center;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+
+  border-radius: 4px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
+  transition: color var(--animation-style), background-color var(--animation-style);
+}
+
 /* ========== ШАПКА ========== */
-header {
+.header {
   border-bottom: 1px solid var(--primary-border-color);
 }
 
 /* ========== Логотип (текст) ========== */
-.container.flex {
+.header > .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -66,25 +97,24 @@ header {
   text-decoration: none;
 }
 
-.logo-accent {
+.logo-head__accent {
   color: var(--accent-color);
 }
 
 /* ========== Навигация по сайту ========== */
 .site-nav {
   display: flex;
-  padding-left: 0;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .item {
+.site-nav__item {
   position: relative;
 }
 
-.site-nav .link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -97,11 +127,11 @@ header {
   text-decoration: none;
 }
 
-.site-nav .link.current {
+.site-nav__link--current {
   color: var(--accent-color);
 }
 
-.link.current::after {
+.site-nav__link--current::after {
   content: '';
 
   position: absolute;
@@ -114,8 +144,8 @@ header {
   border-radius: 2px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -127,11 +157,11 @@ header {
   padding-left: 0;
 }
 
-.contact-nav .item + .item {
+.contact-nav__item:last-child {
   margin-left: 50px;
 }
 
-.contact-nav .link {
+.contact-nav__link {
   display: inline-flex;
   align-items: center;
   color: var(--primary-text-color);
@@ -144,37 +174,36 @@ header {
   transition: color var(--animation-style);
 }
 
-.item > .link:hover,
-.item > .link:focus {
+.contact-nav__link:hover,
+.contact-nav__link:focus {
   color: var(--accent-color);
 }
 
-.item > .link:hover .mail-icon,
-.item > .link:focus .mail-icon {
+.contact-nav__link:hover .contact-nav__icon--mail,
+.contact-nav__link:focus .contact-nav__icon--mail {
   fill: var(--accent-color);
 }
 
-.item > .link:hover .tel-icon,
-.item > .link:focus .tel-icon {
+.contact-nav__link:hover .contact-nav__icon--tel,
+.contact-nav__link:focus .contact-nav__icon--tel {
   fill: var(--accent-color);
 }
 
-.mail-icon {
+.contact-nav__icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+
+  transition: fill var(--animation-style);
+}
+
+.contact-nav__icon--mail {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-
-  transition: fill var(--animation-style);
 }
 
-.tel-icon {
+.contact-nav__icon--tel {
   width: 10px;
   height: 16px;
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-
-  transition: fill var(--animation-style);
 }
 
 /* ========== ТЕЛО ========== */
@@ -206,28 +235,6 @@ header {
   margin-bottom: 30px;
 }
 /* ========== Настройка отображения кнопок ========== */
-.button {
-  text-align: center;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  border: none;
-
-  border-radius: 4px;
-  padding: 10px 30px;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-
-  transition: color var(--animation-style), background-color var(--animation-style);
-}
 
 .button:hover,
 .button:focus {
@@ -814,13 +821,6 @@ header {
 .link {
   position: relative;
   text-decoration: none;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .section.portfolio {
