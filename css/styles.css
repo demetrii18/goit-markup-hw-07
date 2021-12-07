@@ -375,6 +375,10 @@ ul {
 }
 
 /* ========== Настройка секции "Наша команда" ========== */
+.section__title--team {
+  padding-top: 94px;
+}
+
 .our-team {
   display: flex;
   padding-left: 0;
@@ -385,18 +389,23 @@ ul {
   line-height: 19px;
 }
 
-.our-team .cards:not(:last-child) {
-  margin-right: 30px;
-}
-
-.our-team .cards {
+.our-team__item {
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team .title {
+.our-team__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.workers__photo {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.workers__title {
   text-align: center;
   color: var(--title-text-color);
 
@@ -407,16 +416,7 @@ ul {
   margin-bottom: 10px;
 }
 
-.section-title.team {
-  padding-top: 94px;
-}
-
-.our-team .workers {
-  display: block;
-  margin-bottom: 30px;
-}
-
-.cards .text {
+.workers__text {
   text-align: center;
   margin-bottom: 16px;
 }
@@ -428,7 +428,7 @@ ul {
   padding-bottom: 30px;
 }
 
-.link-team {
+.colladge__link {
   display: inline-flex;
   width: 44px;
   height: 44px;
@@ -439,7 +439,7 @@ ul {
   transition: background-color var(--animation-style);
 }
 
-.icon-team {
+.colladge__icon {
   width: 20px;
   height: 20px;
   margin: 12px;
@@ -448,17 +448,17 @@ ul {
   transition: fill var(--animation-style);
 }
 
-.colladge .item:not(:last-child) {
+.colladge__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.link-team:hover,
-.link-team:focus {
+.colladge__link:hover,
+.colladge__link:focus {
   background-color: var(--accent-color);
 }
 
-.link-team:hover .icon-team,
-.link-team:focus .icon-team {
+.colladge__link:hover .colladge__icon,
+.colladge__link:focus .colladge__icon {
   fill: var(--primary-white-color);
 }
 
