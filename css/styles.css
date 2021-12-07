@@ -883,7 +883,7 @@ ul {
   background-color: rgba(0%, 0%, 0%, 0.5);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -902,7 +902,7 @@ ul {
   background-color: var(--primary-white-color);
 }
 
-.close-button {
+.modal__button {
   position: absolute;
   top: 0;
   right: 0;
@@ -919,7 +919,7 @@ ul {
   padding: 0;
 }
 
-.close-icon {
+.modal__close-icon {
   position: absolute;
   top: 50;
   right: 50;
@@ -930,13 +930,13 @@ ul {
   fill: var(--primary-black-color);
 }
 
-.close-button:hover,
-.close-button:focus {
+.modal__button:hover,
+.modal__button:focus {
   cursor: pointer;
 }
 
-.close-button:hover .close-icon,
-.close-button:focus .close-icon {
+.modal__button:hover .modal__close-icon,
+.modal__button:focus .modal__close-icon {
   fill: var(--accent-color);
 
   transition: fill var(--animation-style);
@@ -947,7 +947,7 @@ ul {
   padding: 40px 39px 40px 41px;
 }
 
-.form-title {
+.form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -966,15 +966,8 @@ ul {
   margin-bottom: 10px;
 }
 
-.comment-field {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 20px;
-}
-
-.comment-field .comment-field-text,
-.form-field .form-field-text {
+.form-field__text,
+.comment-field__text {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -985,30 +978,7 @@ ul {
   margin-bottom: 4px;
 }
 
-.comment-field .comment {
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  resize: none;
-}
-
-.comment-field textarea:focus {
-  border-color: var(--accent-color);
-
-  transition: border-color var(--animation-style);
-}
-
-.comment-field textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.form-field input {
+.form-field__input {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1016,7 +986,7 @@ ul {
   outline: none;
 }
 
-.name-icon {
+.form-field__icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -1030,16 +1000,46 @@ ul {
   fill: var(--primary-black-color);
 }
 
-.form-field input:focus {
+.form-field__input:focus {
   border-color: var(--accent-color);
 
   transition: border-color var(--animation-style);
 }
 
-.form-field input:focus + .name-icon {
+.form-field__input:focus + .form-field__icon {
   fill: var(--accent-color);
 
   transition: fill var(--animation-style);
+}
+
+.comment-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.comment-field__comment {
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+.comment-field__comment:focus {
+  border-color: var(--accent-color);
+
+  transition: border-color var(--animation-style);
+}
+
+.comment-field__comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .agree {
@@ -1049,13 +1049,13 @@ ul {
   margin-bottom: 30px;
 }
 
-.agree .agree-text {
+.agree__text {
   line-height: 1.71;
 
   color: var(--primary-text-color);
 }
 
-.agree .agree-icon {
+.agree__icon {
   display: inline-flex;
   width: 16px;
   height: 15px;
@@ -1064,7 +1064,7 @@ ul {
   cursor: pointer;
 }
 
-.agree .checkbox:checked + .agree-icon {
+.agree__input:checked + .agree__icon {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 
@@ -1073,26 +1073,30 @@ ul {
   background-origin: border-box;
 }
 
-.agree .checkbox {
+.agree__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+
   appearance: none;
 }
 
-.agree-icon + .agree-text {
+.agree__icon + .agree__text {
   margin-left: 7px;
 }
 
-.agree a {
+.agree__link {
   color: var(--accent-color);
 }
 
-.form .button {
+.form__button {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.form .button:hover,
-.form .button:focus {
+.form__button:hover,
+.form__button:focus {
   color: var(--primary-white-color);
   background-color: #188ce8;
 
