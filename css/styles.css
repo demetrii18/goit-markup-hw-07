@@ -326,7 +326,7 @@ ul {
   display: inline-flex;
 }
 
-.our-work__descr {
+.description {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -336,7 +336,7 @@ ul {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.our-work__descr--text {
+.description__text {
   padding: 27px 82px;
 
   font-weight: 700;
@@ -799,14 +799,14 @@ ul {
   width: 370px;
 }
 
-.project__poster {
+.poster {
   position: relative;
   overflow: hidden;
 
   display: inline-flex;
 }
 
-.project__poster::before {
+.poster::before {
   content: '';
 
   display: inline-flex;
@@ -822,7 +822,7 @@ ul {
   transition: transform var(--animation-style);
 }
 
-.project__poster--text {
+.poster__text {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -840,14 +840,14 @@ ul {
   transition: transform var(--animation-style);
 }
 
-.project__link:hover .project__poster::before,
-.project__link:hover .project__poster--text,
-.project__link:focus .project__poster::before,
-.project__link:focus .project__poster--text {
+.project__link:hover .poster::before,
+.project__link:hover .poster__text,
+.project__link:focus .poster::before,
+.project__link:focus .poster__text {
   transform: translateY(0);
 }
 
-.project__content {
+.content {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -855,7 +855,7 @@ ul {
   padding-top: 20px;
 }
 
-.project__content--title {
+.content__title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -867,7 +867,7 @@ ul {
   padding-left: 24px;
 }
 
-.project__content--text {
+.content__text {
   padding-bottom: 20px;
   padding-left: 24px;
 }
