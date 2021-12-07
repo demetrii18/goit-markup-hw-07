@@ -85,9 +85,7 @@ ul {
   justify-content: flex-start;
 }
 
-.logo-head {
-  margin-right: 93px;
-
+.logo {
   color: var(--primary-black-color);
 
   font-family: Raleway, sans-serif;
@@ -97,7 +95,11 @@ ul {
   text-decoration: none;
 }
 
-.logo-head__accent {
+.logo__head {
+  margin-right: 93px;
+}
+
+.logo__accent {
   color: var(--accent-color);
 }
 
@@ -561,6 +563,7 @@ ul {
 .client-list__link:focus .client-list__icon.client-list__icon--corp6 {
   fill: var(--accent-color);
 }
+
 /* ========== ПОДВАЛ ========== */
 .footer {
   background-color: var(--secondary-bg-color);
@@ -575,21 +578,26 @@ ul {
   display: inline-block;
 }
 
-.logo-foot {
+.logo__foot {
   color: var(--primary-white-color);
-
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
 
   display: inline-block;
   padding-top: 60px;
   margin-bottom: 20px;
 }
 
-.address .link {
+.address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  padding-bottom: 60px;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.address__link {
   color: var(--primary-white-color);
 
   font-style: inherit;
@@ -597,19 +605,12 @@ ul {
   text-decoration: none;
 }
 
-.address .link:hover,
-.address .link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--primary-white-color);
 }
 
-.address {
-  display: inline-block;
-  font-style: normal;
-  padding-bottom: 60px;
-  padding-left: 0;
-}
-
-.address .link-opacity {
+.address__link--opacity {
   color: rgba(255, 255, 255, 0.6);
 
   line-height: 1.71;
@@ -617,16 +618,12 @@ ul {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.address > .item {
-  margin-bottom: 8px;
-}
-
 /* ========== Стили блока "Присоединяйтесь" ========== */
 .join-us {
   padding: 72px 0 100px 78px;
 }
 
-.join-us > .title {
+.join-us__title {
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
@@ -637,14 +634,13 @@ ul {
 
 .colladge-join {
   display: flex;
-  padding-left: 0;
 }
 
-.colladge-join .item:not(:last-child) {
+.colladge-join__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.link-join {
+.colladge-join__link {
   display: flex;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -652,30 +648,16 @@ ul {
   transition: background-color var(--animation-style);
 }
 
-.icon-join {
+.colladge-join__icon {
   width: 20px;
   height: 20px;
   margin: 12px;
   fill: var(--primary-white-color);
 }
 
-.link-join:hover,
-.link-join:focus {
+.colladge-join__link:hover,
+.colladge-join__link:focus {
   background-color: var(--accent-color);
-}
-
-.subscribe-icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--primary-white-color);
-  margin-left: 10px;
-
-  transition: fill var(--animation-style);
-}
-
-.subscribe-button:hover .subscribe-icon,
-.subscribe-button:focus .subscribe-icon {
-  fill: var(--accent-color);
 }
 
 /* ========== Стили блока "ПОДПИШИТЕСЬ" ========== */
@@ -693,25 +675,30 @@ ul {
   padding-left: 93px;
 }
 
-.subscribe .title {
+.subscribe__title {
   margin-bottom: 20px;
 }
 
-.subscribe-field {
+.subscribe__field {
   display: inline-flex;
 }
 
-.subscribe-field .sub-label + .subscribe-button {
+.subscribe__field::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__label + .subscribe__button {
   margin-left: 12px;
 }
 
-.subscribe-button-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.email {
+.subscribe__input {
   width: 358px;
   height: 50px;
   padding-top: 15px;
@@ -726,21 +713,30 @@ ul {
   outline: none;
 }
 
-.email:focus {
+.subscribe__input:focus {
   border-color: var(--accent-color);
 
   transition: border-color var(--animation-style);
 }
 
-.subscribe-field::placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-
+.subscribe__button--text {
   display: flex;
+  justify-content: center;
   align-items: center;
+}
 
-  color: rgba(255, 255, 255, 0.6);
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-white-color);
+  margin-left: 10px;
+
+  transition: fill var(--animation-style);
+}
+
+.subscribe__button:hover .subscribe__icon,
+.subscribe__button:focus .subscribe__icon {
+  fill: var(--accent-color);
 }
 
 /* ========== Контент вкладки "Портфолио" ========== */
