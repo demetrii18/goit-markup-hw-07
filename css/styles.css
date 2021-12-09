@@ -545,7 +545,8 @@ ul {
   justify-content: center;
 }
 
-.conection {
+/* ========== Стили блока "conection" ========== */
+.connection {
   display: inline-block;
 }
 
