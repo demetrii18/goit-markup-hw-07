@@ -37,3 +37,34 @@
   line-height: 1.2;
   text-decoration: none;
 }
+
+.section {
+  margin: auto;
+  color: var(--primary-text-color);
+
+  line-height: 1.71;
+  margin-bottom: 94px;
+
+  &--accent {
+    background-color: $primary-button-bg-color;
+  }
+
+  &__title {
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    &--hide {
+      display: none;
+    }
+
+    &--team {
+      padding-top: 94px;
+    }
+  }
+}
