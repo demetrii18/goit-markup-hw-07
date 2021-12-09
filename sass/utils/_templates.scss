@@ -26,6 +26,12 @@
   height: 50px;
 
   transition: color $animation-style, background-color $animation-style;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primary-white-color;
+  }
 }
 
 .logo {
