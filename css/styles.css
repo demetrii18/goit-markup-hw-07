@@ -84,13 +84,13 @@ ul {
   border-bottom: 1px solid var(--primary-border-color);
 }
 
-/* ========== Логотип (текст) ========== */
 .header > .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
+/* ========== Логотип (текст) ========== */
 .logo {
   color: var(--primary-black-color);
 

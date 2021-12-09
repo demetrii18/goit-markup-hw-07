@@ -1,11 +1,11 @@
-%container {
+.container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-%button {
+.button {
   text-align: center;
   color: $primary-white-color;
   background-color: $accent-color;
@@ -26,4 +26,14 @@
   height: 50px;
 
   transition: color $animation-style, background-color $animation-style;
+}
+
+.logo {
+  color: $primary-black-color;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
 }
