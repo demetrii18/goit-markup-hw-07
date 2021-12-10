@@ -30,8 +30,8 @@
       cursor: pointer;
     }
 
-    &:hover &__close-icon,
-    &:focus &__close-icon {
+    &:hover .modal__close-icon,
+    &:focus .modal__close-icon {
       fill: $accent-color;
       transition: fill $animation-style;
     }
